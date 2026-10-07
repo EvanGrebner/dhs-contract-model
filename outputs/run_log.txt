@@ -1,0 +1,68 @@
+Awards: {'awards_total': 35462, 'after_us_place_of_performance': 35384, 'after_value_at_least_1_dollar': 34615}
+Model data: 34,615 awards x 41 predictors
+
+Held-out test performance (log-dollar scale)
+                                  r2  rmse_log  mae_log  typical_factor_error
+Mean-only baseline            -0.000     2.486    1.996                 5.597
+OLS                            0.374     1.966    1.526                 3.461
+Ridge                          0.375     1.966    1.526                 3.455
+Lasso                          0.374     1.966    1.526                 3.458
+Gradient boosting (benchmark)  0.575     1.622    1.225                 2.603
+
+OLS 5-fold CV R2 on training set: 0.388 +/- 0.004
+OLS vs scikit-learn max |coef diff|: 5.76e-12
+Regularization: {'ridge_alpha': 177.82794100389228, 'lasso_alpha': 0.0011149961891336426, 'lasso_nonzero': 41, 'lasso_total': 41}
+
+Diagnostics: {
+  "train_r2": 0.39003281766535347,
+  "train_adj_r2": 0.38912834553241593,
+  "n_train": 27692,
+  "breusch_pagan": {
+    "lm_stat": 2193.2584744926476,
+    "df": 41,
+    "p_value": 0.0
+  },
+  "jarque_bera": {
+    "stat": 823.6094415111379,
+    "p_value": 1.4304811988577446e-179,
+    "skew": -0.11459104947554555,
+    "excess_kurtosis": 0.8131902274203928
+  },
+  "vif_max": 5.664664720005237,
+  "vif_max_term": "set_aside=Not reported",
+  "n_vif_above_10": 0,
+  "n_cooks_above_4_over_n": 1375,
+  "max_cooks": 0.015946056191167686,
+  "max_leverage": 0.25001876097446285
+}
+
+Top VIFs:
+ set_aside=Not reported                  5.66
+award_type=Purchase Order               3.68
+offers_missing                          2.83
+competition=Competed (simplified)       2.77
+competition=Not competed                2.37
+sector=Professional & technical svcs    2.04
+
+Largest effects (|t|), % difference in award value vs reference:
+                                   term  pct_effect     t  reference_level
+   sector=Professional & technical svcs       149.9  22.9    Manufacturing
+                    sub_agency=OPO (HQ)       179.5  19.7             USCG
+                               pbsa=Yes       104.5  16.1               No
+              pricing=T&M / labor hours       161.0  15.5 Firm fixed price
+                         sub_agency=CBP        91.1  15.4             USCG
+         award_type=Definitive Contract       158.9  14.8   Delivery Order
+                         set_aside=8(a)       143.7  14.6     No set-aside
+                    sector=Construction       121.1  14.5    Manufacturing
+                         sub_agency=TSA       132.4  14.1             USCG
+               competition=Not competed       -42.1 -12.8      Full & open
+              pricing=Cost-reimbursable       171.0  11.5 Firm fixed price
+business_size=Other Than Small Business        39.6  10.5   Small Business
+
+Numeric terms:
+             term    coef  se_hc3        t  p_value
+        Intercept  8.8570  0.0704 125.7370      0.0
+log_duration_days  0.4345  0.0086  50.7770      0.0
+       log_offers  0.2022  0.0212   9.5250      0.0
+   offers_missing  0.2616  0.0483   5.4139      0.0
+   foreign_entity -0.2288  0.0478  -4.7897      0.0

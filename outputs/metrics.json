@@ -1,0 +1,82 @@
+{
+  "award_counts": {
+    "awards_total": 35462,
+    "after_us_place_of_performance": 35384,
+    "after_value_at_least_1_dollar": 34615
+  },
+  "n_predictors": 41,
+  "seed": 42,
+  "test_scores": {
+    "Mean-only baseline": {
+      "r2": -0.00022934524685758184,
+      "rmse_log": 2.486449097896949,
+      "mae_log": 1.9959853023650822,
+      "typical_factor_error": 5.597005949785517
+    },
+    "OLS": {
+      "r2": 0.37449386071255764,
+      "rmse_log": 1.9662809208077627,
+      "mae_log": 1.526138092705358,
+      "typical_factor_error": 3.4614652104496124
+    },
+    "Ridge": {
+      "r2": 0.37455100970620125,
+      "rmse_log": 1.9661910947168735,
+      "mae_log": 1.5260490772245634,
+      "typical_factor_error": 3.4553835605127787
+    },
+    "Lasso": {
+      "r2": 0.3744725592799918,
+      "rmse_log": 1.9663144010897482,
+      "mae_log": 1.526150531966107,
+      "typical_factor_error": 3.4583257043424087
+    },
+    "Gradient boosting (benchmark)": {
+      "r2": 0.5745036296444399,
+      "rmse_log": 1.6217268486057008,
+      "mae_log": 1.2250767319261495,
+      "typical_factor_error": 2.602826951111249
+    }
+  },
+  "ols_cv_r2_mean": 0.38778651964888694,
+  "ols_cv_r2_sd": 0.0044225354315311485,
+  "ols_vs_sklearn_max_abs_coef_diff": 3.730349362740526e-14,
+  "regularization": {
+    "ridge_alpha": 177.82794100389228,
+    "lasso_alpha": 0.0011149961891336426,
+    "lasso_nonzero": 41,
+    "lasso_total": 41
+  },
+  "diagnostics": {
+    "train_r2": 0.3900328176653536,
+    "train_adj_r2": 0.38912834553241615,
+    "n_train": 27692,
+    "breusch_pagan": {
+      "lm_stat": 2193.2584744929645,
+      "df": 41,
+      "p_value": 0.0
+    },
+    "jarque_bera": {
+      "stat": 823.6094415111206,
+      "p_value": 1.4304811988701343e-179,
+      "skew": -0.11459104947552447,
+      "excess_kurtosis": 0.8131902274203955
+    },
+    "vif_max": 5.664664720005277,
+    "vif_max_term": "set_aside=Not reported",
+    "n_vif_above_10": 0,
+    "n_cooks_above_4_over_n": 1375,
+    "max_cooks": 0.015946056191094442,
+    "max_leverage": 0.2500187609744646
+  },
+  "reference_levels": {
+    "sub_agency": "USCG",
+    "award_type": "Delivery Order",
+    "pricing": "Firm fixed price",
+    "competition": "Full & open",
+    "set_aside": "No set-aside",
+    "business_size": "Small Business",
+    "pbsa": "No",
+    "sector": "Manufacturing"
+  }
+}
