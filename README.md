@@ -1,5 +1,7 @@
 # DHS Contract Value Model
 
+**Live dashboard:** https://dhs-contract-model.streamlit.app/
+
 This project is a regression analysis of what features go along with the value of Department of Homeland Security (DHS) contract awards, using public FY2025 data from USAspending.gov. It also has a Streamlit dashboard where you can explore the results and estimate the value of a hypothetical award.
 
 ## Overview
