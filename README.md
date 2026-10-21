@@ -92,6 +92,7 @@ pip install -r requirements.txt
 python src/run_model.py --data data/YOUR_FILE.csv
 streamlit run app.py
 ```
+Replace YOUR_FILE.csv with the name of the file you downloaded from USAspending.gov
 
 `run_model.py` may take a few minutes and saves the results and charts in `outputs/`. The results from my FY2025 run are already in this repo, so you can skip the second line and just run the dashboard.
 
